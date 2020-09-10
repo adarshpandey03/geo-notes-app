@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Note Title</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="data.Title" required>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button  mat-raised-button [disabled]="!data.Title" [mat-dialog-close]="data.Title" cdkFocusInitial>Ok</button>
+</div>

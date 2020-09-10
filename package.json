@@ -13,19 +13,43 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "~8.2.14",
+    "@angular/cdk": "~8.2.3",
     "@angular/common": "~8.2.14",
     "@angular/core": "~8.2.14",
     "@angular/forms": "~8.2.14",
+    "@angular/material": "^8.2.3",
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "@ionic-native/core": "^5.0.7",
+    "@ionic-native/date-picker": "^5.24.0",
+    "@ionic-native/geofence": "^5.26.0",
+    "@ionic-native/geolocation": "^5.26.0",
+    "@ionic-native/local-notifications": "^5.24.0",
     "@ionic-native/splash-screen": "^5.0.0",
+    "@ionic-native/sqlite": "^5.24.0",
+    "@ionic-native/sqlite-porter": "^5.24.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
+    "cordova-android": "^8.1.0",
+    "cordova-plugin-add-swift-support": "^1.6.0",
+    "cordova-plugin-badge": "^0.8.8",
+    "cordova-plugin-compat": "^1.2.0",
+    "cordova-plugin-datepicker": "^0.9.3",
+    "cordova-plugin-geofence": "^0.7.0",
+    "cordova-plugin-geolocation": "^4.0.2",
+    "cordova-plugin-local-notification": "^0.9.0-beta.2",
+    "cordova-sqlite-storage": "^5.0.0",
     "core-js": "^2.5.4",
+    "es6-promise-plugin": "^4.2.2",
+    "gridstack": "^1.1.1",
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.5.0",
+    "jqueryui": "^1.11.1",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
+    "uk.co.workingedge.cordova.plugin.sqliteporter": "^1.1.1",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -39,6 +63,12 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.2.0",
+    "cordova-plugin-ionic-webview": "^4.2.1",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -51,5 +81,26 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-sqlite-storage": {},
+      "uk.co.workingedge.cordova.plugin.sqliteporter": {},
+      "cordova-plugin-local-notification": {},
+      "cordova-plugin-datepicker": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-geofence": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
 }

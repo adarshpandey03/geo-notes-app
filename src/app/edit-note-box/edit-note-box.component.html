@@ -1,0 +1,25 @@
+<!-- <mat-list *ngIf = "note">
+    <div mat-subheader>{{note.Title}}</div>
+    <mat-list-item *ngFor="let content of note.Content">
+      <div mat-line>{{content}}</div>
+    </mat-list-item>
+</mat-list> -->
+<div *ngIf='note' class="editBox">
+    <div class="subheader">
+      {{note.Title}}
+      <button *ngIf="note.Id" mat-icon-button aria-label="delete" (click)="deleteNote(note.Id)"> 
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button *ngIf="note.Id" mat-icon-button aria-label="delete" (click)="addScheduledNotification()"> 
+        <mat-icon>alarm</mat-icon>
+      </button>   
+</div>
+  <div class="paper">
+    <div class="paper-content">
+        <textarea autofocus [(ngModel)]="note.Content">{{note.Content}}</textarea>
+    </div>
+</div>
+  <button class="saveButton" mat-fab color="primary" aria-label="Save" (click)="saveNote()">
+    <mat-icon>save</mat-icon>
+  </button>
+</div>
